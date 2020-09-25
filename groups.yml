@@ -7,9 +7,10 @@ default:
   subgroups: []
   permissions:
   - '!minecraft.command.*'
-  - '!minecraft.command.fill'
-  - 'bukkit.command.plugins'
+  - '!build.enable'
   - 'default.use'
+  - 'build.disable'
+  - 'bukkit.command.plugins'
 # Донатерские услуги (Привилегии)
 vip:
   prefix: '&a&lVIP &a'
@@ -20,7 +21,6 @@ vip:
   - 'default'
   permissions:
   - 'vip.use'
-  - 'firework.use'
 master:
   prefix: '&6&lMATSER &6'
   displayname: 'Mater'
@@ -72,8 +72,9 @@ dropper:
   - 'dropper.use'
   - 'lobby.doublejump'
 youtube:
-  displayName: '&c&lYOU&f&lTUBE &c'
-  secure: true
+  prefix: '&e&lYOUTUBE &e'
+  displayName: 'Ютубер'
+  color: 'e'
   booster: 3.0
   subgroups:
   - 'default'
@@ -85,9 +86,11 @@ youtube:
   permissions:
   - 'youtube.use'
   - 'api.command.stream'
-# Стафф привилегии
+# Привилегии персонала (Стафф)
 builder:
-  displayName: '&b&lBUILDER &b'
+  prefix: '&b&lBUILDER &b'
+  displayName: 'Строитель'
+  color: 'b'
   booster: 1.5
   subgroups:
   - 'default'
@@ -98,9 +101,12 @@ builder:
   - 'dropper'
   permissions:
   - 'build.use'
+  - 'build.enable'
   - 'staffchat.use'
 helper:
-  displayName: '&2&lHELPER &2'
+  prefix: '&2&lHELPER &2'
+  displayName: 'Помощник'
+  color: '2'
   booster: 1.7
   subgroups:
   - 'default'
@@ -136,67 +142,72 @@ hmoder:
   booster: 2.0
   subgroups:
   - 'default'
-  - 'lite'
-  - 'premium'
-  - 'magma'
-  - 'quantum'
-  - 'ruby'
-  - 'tmoder'
+  - 'vip'
+  - 'master'
+  - 'pro'
+  - 'magic'
+  - 'dropper'
+  - 'helper'
   - 'moder'
   permissions:
   - 'hmoder.use'
+  - 'staffchat.use'
+  - 'bansystem.unmute'
+  - 'bansystem.mute'
+  - 'bansystem.ban'
+  - 'bansystem.unban'
   - 'disgaise.use'
   - 'testing.use'
   - 'playerinfo.use'
   - 'vanish.use'
 admin:
   displayName: '&c&lADMIN &c'
-  booster: 1.5
-  secure: true
+  booster: 2.0
   subgroups:
   - 'default'
-  - 'lite'
-  - 'premium'
-  - 'magma'
-  - 'quantum'
-  - 'ruby'
-  - 'support'
-  - 'tmoder'
+  - 'vip'
+  - 'master'
+  - 'pro'
+  - 'magic'
+  - 'dropper'
+  - 'youtube'
+  - 'helper'
   - 'moder'
-  - 'builder'
-  - 'hbuilder'
   - 'hmoder'
   permissions:
-  - 'staff.admin'
+  - 'admin.use'
+  - 'staffchat.use'
+  - 'testing.use
+  - 'group.use'
+  - 'group.migrate'
+  - 'group.give'
+  - 'group.remove'
 developer:
   displayName: '&2&lDEV &2'
-  booster: 2.0
-  secure: true
+  booster: 5.0
   subgroups:
   - 'default'
-  - 'lite'
-  - 'premium'
-  - 'magma'
-  - 'quantum'
-  - 'ruby'
-  - 'support'
+  - 'vip'
+  - 'master'
+  - 'pro'
+  - 'magic'
+  - 'dropper'
   - 'youtube'
-  - 'tmoder'
+  - 'helper'
   - 'moder'
-  - 'organizer'
   - 'builder'
   - 'hbuilder'
   - 'hmoder'
   - 'admin'
   permissions:
   - 'dev.use'
+  - 'devperms.give'
   - 'minecraft.command.*'
+# Привилегия Владелец проекта
 owner:
   displayName: '&4&lOWNER &4'
-  booster: 1.5
-  secure: true
+  booster: 5.0
   subgroups:
-  - 'default'
   - 'default'
   - 'vip'
   - 'master'
@@ -213,4 +224,7 @@ owner:
   - 'developer'
   permissions:
   - 'owner.use'
-  - 'crash.use'
+  - 'group.*'
+  - 'lobby.function.*'
+  - 'bansystem.*'
+    
