@@ -68,3 +68,13 @@ STAFFCHAT_DISABLED: '%s §rdisabled staff chat'
 
 DONATECHAT_FORMAT: '§6Donate chat §8| §r%s §8» §7%s'
 STAFFCHAT_FORMAT: '§cStaff chat §8| §r%s §8» §7%s'
+
+BOARD_GROUP: 'Status'
+BOARD_MONEY: 'Money'
+BOARD_GOLD: 'Gold'
+BOARD_VK: ' Group VK: '
+BOARD_URLS: 'Полезные ссылки'
+BOARD_SITE: ' Shop'
+BOARD_BUSTER: 'Active boosters'
+BOARD_NO_BUSTER: ' Not found..'
+BOARD_LEVEL: 'Level'
